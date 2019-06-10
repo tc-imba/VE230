@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{3}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{3-22}
+\begin{enumerate}[label=\alph*)]
+\item 
+$$\rho_{ps}=\mathbf{P}\cdot\mathbf{a_n}|_{n=L/2}=\frac{1}{2}P_0L.$$
+$$\rho_p=-\nabla\cdot\mathbf{P}=-3P_0.$$
+\item
+$$Q_s=\oint_S\rho_{ps}dS=\frac{1}{2}P_0L\cdot 6L^2=3P_0L^3,$$
+$$Q_v=\int_v\rho_pdV=\int_{-L/2}^{L/2}\int_{-L/2}^{L/2}\int_{-L/2}^{L/2}\rho_pdzdydx=-3P_0L^3,$$
+$$Q=Q_s+Q_v=0.$$
+\end{enumerate}
+
+\subsection{3-23}
+Let $\mathbf{P}=\mathbf{a_p}P_0$, $\theta=\langle \mathbf{P},\mathbf{a_n} \rangle$,
+$$\rho_{ps}(\theta)=\mathbf{P}\cdot\mathbf{a_n}=P_0\cos\theta,$$
+$$dE_\theta=dv\cdot\frac{\rho_{ps}}{4\pi\varepsilon_0R^2}\cdot\cos\theta=2\pi R^2\sin\theta d\theta\cdot\frac{P_0\cos\theta}{4\pi\varepsilon_0R^2}\cdot\cos\theta=\frac{P_0\sin\theta\cos\theta^2}{2\varepsilon_0}d\theta.$$
+$$|\mathbf{E}|=\int dE_\theta=\int_0^\pi\frac{P_0\sin\theta\cos\theta^2}{2\varepsilon_0}d\theta=\frac{P_0}{3\varepsilon_0},$$
+$$\mathbf{E}=\mathbf{a_p}\frac{P_0}{3\varepsilon_0}=\frac{\mathbf{P}}{3\varepsilon_0}.$$
+
+\subsection{3-25}
+
+
+\end{document}
+
+
