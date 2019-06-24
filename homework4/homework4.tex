@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{4}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{4-1}
+Let $x$ be the up direction. 
+$$D_1=D_2,$$
+$$\varepsilon_0E_1=\varepsilon_0\varepsilon_rE_2,$$
+$$E_1=6E_2.$$
+Let $V_1$ be the upper potential of the dielectric slab,$$\left\{\begin{aligned}V_0&=E_1\cdot0.2d+E_2\cdot0.8d\\V_1&=E_2\cdot 0.8d\end{aligned}\right.\Longrightarrow V_1=0.4V_0.$$
+Then
+$$\left\{\begin{aligned}V_0&=C_1d+C_2\\V_1&=C_1\cdot 0.8d+C_2\\V_1&=C_3\cdot 0.8d + C_4\\0&=C_3\cdot 0+C_4\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}C_1&=\frac{3V_0}{d}\\C_2&=-2V_0\\C_3&=\frac{V_0}{2d}\\C_4&=0\end{aligned}\right..$$
+\begin{enumerate}[label=\alph*)]
+\item
+In the dielectric slab, $0\leqslant x\leqslant 0.8d$,
+$$V=\frac{V_0}{2d}x,\quad\mathbf{E}=-\frac{V_0}{2d}\mathbf{a_x}.$$
+\item
+In the air space between the dielectric slab and the upper plate, $0.8d\leqslant x\leqslant d,$
+$$V=\frac{3V_0}{d}x-2V_0,\quad\mathbf{E}=-\frac{3V_0}{d}\mathbf{a_x}.$$
+\item
+On the upper plate,
+$$\rho_s=\varepsilon_0|\mathbf{E}|=\frac{3V_0\varepsilon_0}{d}.$$
+On the lower plate,
+$$\rho_s=-\varepsilon_0\varepsilon_r|\mathbf{E}|=-\frac{3V_0\varepsilon_0}{d}.$$
+\item
+If there is no dielectric slab,
+$$V=\frac{V_0}{d}x,\quad \mathbf{E}=-\frac{V_0}{d}\mathbf{a_x}.$$ 
+\end{enumerate}
+
+\subsection{4-5}
+
+
+
+\end{document}
+
+
