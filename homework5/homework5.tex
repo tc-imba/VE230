@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{5}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{5-7}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\exp\left[-\frac{\sigma}{\varepsilon}t\right]=0.01,$$
+$$t=-\frac{\varepsilon_0\varepsilon_r}{\sigma}\ln0.01\approx \SI{4.89e-12}{\second}.$$
+\item
+$$\Delta W=\exp\left[-\frac{\sigma}{\varepsilon}t\right]^2=\num{1e-4}.$$
+The energy are transformed into heat energy.
+\item
+$$\frac{Q}{\varepsilon_0}=E\cdot 4\pi r^2,$$
+$$E=\frac{Q}{4\pi r^2\varepsilon_0},$$
+$$W=\int_0^{Q_0} VdQ=\int_0^{Q_0}\int_R^\infty-EdrdQ=\int_0^{Q_0}\frac{Q}{4\pi R\varepsilon_0}dQ=\frac{Q_0^2}{8\pi R\varepsilon_0}\approx\SI{4.494e4}{\joule}.$$
+\end{enumerate}
+
+\subsection{5-10}
+
+\subsection{5-16}
+$$\frac{1}{R^2(1+k/R)}=\frac{1}{R(R+k)}=\frac{1}{k}\left(\frac{1}{R}-\frac{1}{R+k}\right),$$
+$$R=\int_{R_1}^{R_2}\frac{1}{4\pi R^2\sigma}dR=\frac{1}{4\pi\sigma_0k}\int_{R_1}^{R_2}\left(\frac{1}{R}-\frac{1}{R+k}\right)dR=\frac{1}{4\pi\sigma_0k}\ln\frac{R}{R+k}\bigg|_{R_1}^{R_2}=\frac{1}{4\pi\sigma_0k}\ln\frac{R_2(R_1+k)}{R_1(R_2+k)}.$$
+
+
+\end{document}
+
+
