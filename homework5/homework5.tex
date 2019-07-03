@@ -30,11 +30,87 @@ $$W=\int_0^{Q_0} VdQ=\int_0^{Q_0}\int_R^\infty-EdrdQ=\int_0^{Q_0}\frac{Q}{4\pi R
 \end{enumerate}
 
 \subsection{5-10}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\sigma(y)=\frac{\sigma_2-\sigma_1}{d}y+\sigma_1,$$
+$$\frac{dy}{d\sigma}=\frac{d}{\sigma_2-\sigma_1},$$
+$$R=\int_0^d\frac{1}{\sigma S}dy=\frac{1}{S}\int_{\sigma_1}^{\sigma_2}\frac{1}{\sigma}d\sigma\cdot\frac{dy}{d\sigma}=\frac{d}{S(\sigma_2-\sigma_1)}\int_{\sigma_1}^{\sigma_2}\frac{1}{\sigma}d\sigma=\frac{d}{S(\sigma_2-\sigma_1)}\ln\frac{\sigma_2}{\sigma_1}.$$
+\item
+$$J=\frac{V}{RS}=\frac{V(\sigma_2-\sigma_1)}{d\ln\frac{\sigma_2}{\sigma_1}},$$
+$$\rho_b=-\varepsilon_0E(0)=-\varepsilon_0\frac{J}{\sigma_1}=-\frac{\varepsilon_0V(\sigma_2-\sigma_1)}{\sigma_1d\ln\frac{\sigma_2}{\sigma_1}},$$
+$$\rho_t=\varepsilon_0E(d)=\varepsilon_0\frac{J}{\sigma_2}=\frac{\varepsilon_0V(\sigma_2-\sigma_1)}{\sigma_2d\ln\frac{\sigma_2}{\sigma_1}}.$$
+\item
+$$\rho=\frac{d}{dy}\varepsilon_0E=\frac{d}{dy}\left[-\varepsilon_0J\cdot\frac{d}{\sigma(y)}\right]=\frac{\varepsilon_0J(\sigma_2-\sigma_1)d}{[(\sigma_2-\sigma_1)y+d\sigma_1]^2}=\frac{\varepsilon_0V(\sigma_2-\sigma_1)^2}{[(\sigma_2-\sigma_1)y+d\sigma_1]^2\ln\frac{\sigma_2}{\sigma_1}}.$$
+$$Q=(\rho_b+\rho_t)S=\frac{\varepsilon_0V(\sigma_2-\sigma_1)S}{d\ln\frac{\sigma_2}{\sigma_1}}\left(\frac{1}{\sigma_2}-\frac{1}{\sigma_1}\right).$$
+\end{enumerate}
 
 \subsection{5-16}
 $$\frac{1}{R^2(1+k/R)}=\frac{1}{R(R+k)}=\frac{1}{k}\left(\frac{1}{R}-\frac{1}{R+k}\right),$$
-$$R=\int_{R_1}^{R_2}\frac{1}{4\pi R^2\sigma}dR=\frac{1}{4\pi\sigma_0k}\int_{R_1}^{R_2}\left(\frac{1}{R}-\frac{1}{R+k}\right)dR=\frac{1}{4\pi\sigma_0k}\ln\frac{R}{R+k}\bigg|_{R_1}^{R_2}=\frac{1}{4\pi\sigma_0k}\ln\frac{R_2(R_1+k)}{R_1(R_2+k)}.$$
+$$R_0=\int_{R_1}^{R_2}\frac{1}{\sigma\cdot 4\pi R^2}dR=\frac{1}{4\pi\sigma_0k}\int_{R_1}^{R_2}\left(\frac{1}{R}-\frac{1}{R+k}\right)dR=\frac{1}{4\pi\sigma_0k}\ln\frac{R}{R+k}\bigg|_{R_1}^{R_2}=\frac{1}{4\pi\sigma_0k}\ln\frac{R_2(R_1+k)}{R_1(R_2+k)}.$$
 
+\subsection{5-22}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V=\frac{V_0}{a}x.$$
+\item
+$$\mathbf{E}=-\nabla V=-\frac{V_0}{a}\mathbf{a}_x.$$
+$$\mathbf{J}=\sigma \mathbf{E}=-\frac{\sigma V_0}{a}\mathbf{a}_x.$$
+\end{enumerate}
+
+\subsection{6-2}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{F}=-e(\mathbf{E}+\mathbf{v}\times\mathbf{B})=-e(E_0-u_0B_0)\mathbf{a}_z.$$
+If $E_0>u_0B_0$, the electron moves on -z and y direction;
+
+If $E_0<u_0B_0$, the electron moves on z and y direction;
+
+If $E_0=u_0B_0$, the electron moves on y direction.
+\item
+$$\mathbf{F}=-e(\mathbf{E}+\mathbf{v}\times\mathbf{B})=e(E_0\mathbf{a}_z+u_0B_0\mathbf{a}_x)\mathbf{a}_z.$$
+If $E_0>u_0B_0$, the electron moves on x-z direction, closer to z direction and y direction;
+
+If $E_0<u_0B_0$, the electron moves on x-z direction, closer to x direction and y direction;
+
+If $E_0=u_0B_0$, the electron moves on the midline of x-z direction and y direction.
+\end{enumerate}
+
+\subsection{6-12}
+$$\mathbf{B}=\mathbf{a}_x\cdot\frac{\mu_0Ib^2N}{2}\left\{[(x+d/2)^2+b^2]^{-3/2}+[(x-d/2)^2+b^2]^{-3/2}\right\}.$$
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{B}(x=0)=\mathbf{a}_x\cdot\mu_0Ib^2N[(d/2)^2+b^2]^{-3/2}.$$
+\item
+$$\frac{dB_x}{dx}=\frac{\mu_0Ib^2N}{2}\left\{-\frac{3}{2}[(x+d/2)^2+b^2]^{-5/2}(2x+d)-\frac{3}{2}[(x-d/2)^2+b^2]^{-5/2}(2x-d)\right\},$$
+$$\frac{dB_x(0)}{dx}=\frac{\mu_0Ib^2N}{2}\left\{-\frac{3}{2}[(d/2)^2+b^2]^{-5/2}d-\frac{3}{2}[(d/2)^2+b^2]^{-5/2}(-d)\right\}=0.$$
+\item
+\begin{align*}
+\frac{d^2B_x}{dx^2}=\frac{3\mu_0Ib^2N}{4}&\left\{\frac{5}{2}[(x+d/2)^2+b^2]^{-7/2}(2x+d)^2-2[(x+d/2)^2+b^2]^{-5/2}\right.\\
+&\left.+\frac{5}{2}[(x-d/2)^2+b^2]^{-7/2}(2x-d)^2-2[(x-d/2)^2+b^2]^{-5/2}\right\},
+\end{align*}
+$$\frac{d^2B_x(0)}{dx^2}=\frac{3\mu_0Ib^2N}{4}\left\{5d^2[(d/2)^2+b^2]^{-7/2}-4[(d/2)^2+b^2]^{-5/2}\right\}=0,$$
+$$5d^2[(d/2)^2+b^2]^{-1}-4=0,$$
+$$b=d.$$
+\end{enumerate}
+
+\subsection{6-24}
+\begin{enumerate}[label=\alph*)]
+\item
+\begin{align*}
+V_m&=\int\frac{I\mathbf{a}_n\cdot\mathbf{a}_R}{4\pi(z^2+r^2)} dS\\
+&=\int_0^{2\pi}\int_0^b \frac{I}{4\pi(z^2+r^2)}\frac{z}{\sqrt{z^2+r^2}}rdrd\theta\\
+&=\frac{I}{8\pi}\int_0^{2\pi}\int_{z^2}^{z^2+b^2}z(z^2+r^2)^{-3/2}d(z^2+r^2)d\theta\\
+&=\frac{I}{8\pi}\int_0^{2\pi}2[1-z(z^2+b^2)^{-1/2}]d\theta\\
+&=\frac{I}{2}\left(1-\frac{z}{\sqrt{z^2+b^2}}\right).
+\end{align*}
+\item
+\begin{align*}
+\mathbf{B}&=-\mu_0\nabla V_m\\
+&=-\mu_0\cdot\mathbf{a}_z\frac{I}{2}\left(-\frac{\sqrt{z^2+b^2}-2z\cdot\frac{1}{2}/\sqrt{z^2+b^2}\cdot z}{z^2+b^2}\right)\\
+&=\mathbf{a}_z\frac{\mu_0I}{2}\left(\frac{z^2+b^2-z^2}{(z^2+b^2)^{3/2}}\right)\\
+&=\mathbf{a}_z\frac{\mu_0Ib^2}{2(z^2+b^2)^{3/2}}.
+\end{align*}
+\end{enumerate}
 
 \end{document}
 
