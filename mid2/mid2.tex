@@ -1,0 +1,266 @@
+\documentclass[6pt,a4paper]{article}
+\usepackage{../ve230}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\subsection{4-1}
+Let $x$ be the up direction. 
+$$D_1=D_2,$$
+$$\varepsilon_0E_1=\varepsilon_0\varepsilon_rE_2,$$
+$$E_1=6E_2.$$
+Let $V_1$ be the upper potential of the dielectric slab,$$\left\{\begin{aligned}V_0&=E_1\cdot0.2d+E_2\cdot0.8d\\V_1&=E_2\cdot 0.8d\end{aligned}\right.\Longrightarrow V_1=0.4V_0.$$
+Then
+$$\left\{\begin{aligned}V_0&=C_1d+C_2\\V_1&=C_1\cdot 0.8d+C_2\\V_1&=C_3\cdot 0.8d + C_4\\0&=C_3\cdot 0+C_4\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}C_1&=\frac{3V_0}{d}\\C_2&=-2V_0\\C_3&=\frac{V_0}{2d}\\C_4&=0\end{aligned}\right..$$
+\begin{enumerate}[label=\alph*)]
+\item
+In the dielectric slab, $0\leqslant x\leqslant 0.8d$,
+$$V=\frac{V_0}{2d}x,\quad\mathbf{E}=-\frac{V_0}{2d}\mathbf{a_x}.$$
+\item
+In the air space between the dielectric slab and the upper plate, $0.8d\leqslant x\leqslant d,$
+$$V=\frac{3V_0}{d}x-2V_0,\quad\mathbf{E}=-\frac{3V_0}{d}\mathbf{a_x}.$$
+\item
+On the upper plate,
+$$\rho_s=\varepsilon_0|\mathbf{E}|=\frac{3V_0\varepsilon_0}{d}.$$
+On the lower plate,
+$$\rho_s=-\varepsilon_0\varepsilon_r|\mathbf{E}|=-\frac{3V_0\varepsilon_0}{d}.$$
+\item
+If there is no dielectric slab,
+$$V=\frac{V_0}{d}x,\quad \mathbf{E}=-\frac{V_0}{d}\mathbf{a_x}.$$ 
+\end{enumerate}
+
+\subsection{4-5}
+\begin{enumerate}[label=\alph*)]
+\item
+$$R_+=[x^2+(y-d)^2+z^2]^{1/2},$$
+$$R_-=[x^2+(y+d)^2+z^2]^{1/2},$$
+$$\frac{\partial R_+}{\partial x}=\frac{1}{2R_+}\cdot2x=\frac{x}{R_+},\frac{\partial R_-}{\partial x}=\frac{1}{2R_-}\cdot2x=\frac{x}{R_-},$$
+$$\frac{\partial V}{\partial x}=\frac{Q}{4\pi\epsilon_0}\left(\frac{\partial R_+^{-1}}{\partial R_+}\cdot\frac{\partial R_+}{\partial x}-\frac{\partial R_+^{-1}}{\partial R_-}\cdot\frac{\partial R_-}{\partial x}\right)=\frac{Q}{4\pi\epsilon_0}(-R_+^{-3}x+R_-^{-3}x),$$
+$$\frac{\partial^2 V}{\partial x^2}=\frac{Q}{4\pi\epsilon_0}\left(-\frac{\partial R_+^{-3}x}{\partial R_+}\cdot\frac{\partial R_+}{\partial x}+\frac{\partial R_-^{-3}x}{\partial R_-}\cdot\frac{\partial R_-}{\partial x}\right)=\frac{Q}{4\pi\epsilon_0}(3R_+^{-5}x^2-R_+^{-3}-3R_-^{-5}x^2+R_-^{-3}).$$
+Similarly,
+$$\frac{\partial^2 V}{\partial y^2}=\frac{Q}{4\pi\epsilon_0}[3R_+^{-5}(y-d)^2-R_+^{-3}-3R_-^{-5}(y+d)^2+R_-^{-3}],$$
+$$\frac{\partial^2 V}{\partial z^2}=\frac{Q}{4\pi\epsilon_0}(3R_+^{-5}z^2-R_+^{-3}-3R_-^{-5}z^2+R_-^{-3}),$$
+$$\nabla^2 V=\frac{\partial^2 V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2}+\frac{\partial^2 V}{\partial z^2}=\frac{Q}{4\pi\epsilon_0}\{3R_+^{-5}[x^2+(y-d)^2+z^2]-3R_+^{-3}-3R_-^{-5}[x^2+(y+d)^2+z^2]+3R_-^{-3}\}=0.$$
+\item
+$$V(x,0,z)=\frac{Q}{4\pi\epsilon_0}\left[\frac{1}{(x^2+d^2+z^2)^{1/2}}-\frac{1}{(x^2+d^2+z^2)^{1/2}}\right]+k=V_0,$$
+$$V(x,y,z)=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_+}-\frac{1}{R_-}\right)+V_0.$$
+\item
+$$F=\frac{1}{4\pi\epsilon_0}\cdot\frac{Q^2}{4d^2}=\frac{Q^2}{16\pi\epsilon_0d^2}.$$
+\end{enumerate}
+
+\subsection{4-11}
+
+\subsection{4-14}
+\begin{enumerate}[label=\alph*)]
+\item
+$$C_1=\frac{1}{2D}(a_2^2-a_1^2-D^2),\quad C_2=\frac{1}{2D}(a^2-a_1^2+D^2),\quad b^2=c_1^2-a_1^2.$$
+$$V_1=\frac{\rho_l}{2\pi\epsilon_0}\ln\frac{b+(c_1-a_1)}{b-(c_1-a_1)},$$
+$$V_2=\frac{\rho_l}{2\pi\epsilon_0}\ln\frac{b+(c_2-a_2)}{b-(c_2-a_2)},$$
+$$C=\frac{\rho_l}{V_1-V_2}=2\pi\epsilon_0\ln\left[\frac{b+(c_1-a_1)}{b-(c_1-a_1)}\cdot\frac{b-(c_1-a_1)}{b+(c_1-a_1)}\right]^{-1}.$$
+\item
+$$F=\frac{1}{2\pi\epsilon_0}\cdot\frac{\rho_l^2}{4b^2}.$$
+\end{enumerate}
+
+\subsection{4-17}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V_1(x,y,z)=\frac{1}{4\pi\epsilon_0}\left(\frac{Q}{R_+}-\frac{Q_1}{R_-}\right),$$
+$$R_+=[(x-d)^2+y^2+z^2]^{1/2},$$
+$$R_-=[(x+d)^2+y^2+z^2]^{1/2}.$$
+Similar to P. 4-5,
+$$\nabla^2 V_1=\frac{Q}{4\pi\epsilon_0}\{3R_+^{-5}[(x-d)^2+y^2+z^2]-3R_+^{-3}\}-\frac{Q_1}{4\pi\epsilon_0}\{3R_-^{-5}[(x+d)^2+y^2+z^2]-3R_-^{-3}\}=0.$$
+\item
+$$V_2(x,y,z)=\frac{1}{4\pi\epsilon_0}\left(\frac{Q}{R_+}+\frac{Q_2}{R_+}\right)$$
+Similar to P. 4-5,
+$$\nabla^2 V_2=\frac{Q+Q_2}{4\pi\epsilon_0}\{3R_+^{-5}[(x-d)^2+y^2+z^2]-3R_+^{-3}\}=0.$$
+\item
+When $x=0$, $R_+=R_-=R=[d^2+y^2+z^2]^{1/2},$
+$$\frac{\partial V_1}{\partial x}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}(x-d)+Q_1R_-^{-3}(x+d)]=\frac{d}{4\pi\epsilon_0R^3}(Q+Q_1),$$
+$$\frac{\partial V_2}{\partial x}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}(x-d)-Q_2R_+^{-3}(x-d)]=\frac{d}{4\pi\epsilon_0R^3}(Q+Q_2),$$
+$$\frac{\partial V_1}{\partial y}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}y+Q_1R_-^{-3}y]=\frac{1}{4\pi\epsilon_0R^3}(-Q+Q_1),$$
+$$\frac{\partial V_2}{\partial y}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}y-Q_2R_+^{-3}y]=\frac{1}{4\pi\epsilon_0R^3}(-Q-Q_2).$$
+Since
+$$\frac{\partial V_1}{\partial x}=\frac{\partial V_2}{\partial x},\quad\epsilon_1\frac{\partial V_1}{\partial y}=\epsilon_2\frac{\partial V_1}{\partial y},$$
+$$Q_1=Q_2=\frac{\epsilon_2-\epsilon_1}{\epsilon_2+\epsilon_1}Q.$$
+\end{enumerate}
+
+\subsection{4-23}
+$$\nabla^2 V=\frac{1}{r^2}\cdot\frac{\partial^2V}{\partial\phi^2}=0.$$
+\begin{enumerate}[label=\alph*)]
+\item
+When $\phi=0$, $V=0$; when $\phi=\alpha$, $V=V_0$,
+$$V=C_1\phi+C_2=\frac{V_0}{\alpha}\phi.$$
+\item
+When $\phi=2pi$, $V=0$; when $\phi=\alpha$, $V=V_0$,
+$$V=C_1\phi+C_2=\frac{V_0}{\alpha-2\pi}(\phi-2\pi).$$
+\end{enumerate}
+
+\subsection{4-28}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V(b,\theta)=V_0,$$
+$$V(R,\theta)=B_0R^{-1}+(B_1R^{-2}-E_0R)\cos\theta+\sum_{n=2}^\infty B_nR^{-n-1}P_n\cos\theta,\quad R\geqslant b.$$
+Since the sphere is charged, $B_0=bV_0$, we can obtain $B_1=E_0b^3$ and $B_n=0$ for $n\geqslant2$.
+$$V(R,\theta)=\frac{bV_0}{R}-E_0\left[1-\left(\frac{b}{R}\right)^3\right]R\cos\theta,\quad R\geqslant b.$$
+\item
+$$\mathbf{E}(R,\theta)=\mathbf{a}_RE_R+\mathbf{a}_\theta E_\theta,$$
+where
+$$E_R=-\frac{\partial V}{\partial R}=-\frac{bV_0}{R^2}+E_0\left[1+2\left(\frac{b}{R}\right)^3\right]\cos\theta,\quad R\geqslant b,$$
+$$E_\theta=-\frac{\partial V}{R\partial \theta}=-E_0\left[1-\left(\frac{b}{R}\right)^3\right]R\sin\theta,\quad R\geqslant b.$$
+\end{enumerate}
+
+\subsection{5-7}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\exp\left[-\frac{\sigma}{\varepsilon}t\right]=0.01,$$
+$$t=-\frac{\varepsilon_0\varepsilon_r}{\sigma}\ln0.01\approx \SI{4.89e-12}{\second}.$$
+\item
+$$\Delta W=\exp\left[-\frac{\sigma}{\varepsilon}t\right]^2=\num{1e-4}.$$
+The energy are transformed into heat energy.
+\item
+$$\frac{Q}{\varepsilon_0}=E\cdot 4\pi r^2,$$
+$$E=\frac{Q}{4\pi r^2\varepsilon_0},$$
+$$W=\int_0^{Q_0} VdQ=\int_0^{Q_0}\int_R^\infty-EdrdQ=\int_0^{Q_0}\frac{Q}{4\pi R\varepsilon_0}dQ=\frac{Q_0^2}{8\pi R\varepsilon_0}\approx\SI{4.494e4}{\joule}.$$
+\end{enumerate}
+
+\subsection{5-10}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\sigma(y)=\frac{\sigma_2-\sigma_1}{d}y+\sigma_1,$$
+$$\frac{dy}{d\sigma}=\frac{d}{\sigma_2-\sigma_1},$$
+$$R=\int_0^d\frac{1}{\sigma S}dy=\frac{1}{S}\int_{\sigma_1}^{\sigma_2}\frac{1}{\sigma}d\sigma\cdot\frac{dy}{d\sigma}=\frac{d}{S(\sigma_2-\sigma_1)}\int_{\sigma_1}^{\sigma_2}\frac{1}{\sigma}d\sigma=\frac{d}{S(\sigma_2-\sigma_1)}\ln\frac{\sigma_2}{\sigma_1}.$$
+\item
+$$J=\frac{V}{RS}=\frac{V(\sigma_2-\sigma_1)}{d\ln\frac{\sigma_2}{\sigma_1}},$$
+$$\rho_b=-\varepsilon_0E(0)=-\varepsilon_0\frac{J}{\sigma_1}=-\frac{\varepsilon_0V(\sigma_2-\sigma_1)}{\sigma_1d\ln\frac{\sigma_2}{\sigma_1}},$$
+$$\rho_t=\varepsilon_0E(d)=\varepsilon_0\frac{J}{\sigma_2}=\frac{\varepsilon_0V(\sigma_2-\sigma_1)}{\sigma_2d\ln\frac{\sigma_2}{\sigma_1}}.$$
+\item
+$$\rho=\frac{d}{dy}\varepsilon_0E=\frac{d}{dy}\left[-\varepsilon_0J\cdot\frac{d}{\sigma(y)}\right]=\frac{\varepsilon_0J(\sigma_2-\sigma_1)d}{[(\sigma_2-\sigma_1)y+d\sigma_1]^2}=\frac{\varepsilon_0V(\sigma_2-\sigma_1)^2}{[(\sigma_2-\sigma_1)y+d\sigma_1]^2\ln\frac{\sigma_2}{\sigma_1}}.$$
+$$Q=(\rho_b+\rho_t)S=\frac{\varepsilon_0V(\sigma_2-\sigma_1)S}{d\ln\frac{\sigma_2}{\sigma_1}}\left(\frac{1}{\sigma_2}-\frac{1}{\sigma_1}\right).$$
+\end{enumerate}
+
+\subsection{5-16}
+$$\frac{1}{R^2(1+k/R)}=\frac{1}{R(R+k)}=\frac{1}{k}\left(\frac{1}{R}-\frac{1}{R+k}\right),$$
+$$R_0=\int_{R_1}^{R_2}\frac{1}{\sigma\cdot 4\pi R^2}dR=\frac{1}{4\pi\sigma_0k}\int_{R_1}^{R_2}\left(\frac{1}{R}-\frac{1}{R+k}\right)dR=\frac{1}{4\pi\sigma_0k}\ln\frac{R}{R+k}\bigg|_{R_1}^{R_2}=\frac{1}{4\pi\sigma_0k}\ln\frac{R_2(R_1+k)}{R_1(R_2+k)}.$$
+
+\subsection{5-22}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V=\frac{V_0}{a}x.$$
+\item
+$$\mathbf{E}=-\nabla V=-\frac{V_0}{a}\mathbf{a}_x.$$
+$$\mathbf{J}=\sigma \mathbf{E}=-\frac{\sigma V_0}{a}\mathbf{a}_x.$$
+\end{enumerate}
+
+\subsection{6-2}
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{F}=-e(\mathbf{E}+\mathbf{v}\times\mathbf{B})=-e(E_0-u_0B_0)\mathbf{a}_z.$$
+If $E_0>u_0B_0$, the electron moves on -z and y direction;
+
+If $E_0<u_0B_0$, the electron moves on z and y direction;
+
+If $E_0=u_0B_0$, the electron moves on y direction.
+\item
+$$\mathbf{F}=-e(\mathbf{E}+\mathbf{v}\times\mathbf{B})=e(E_0\mathbf{a}_z+u_0B_0\mathbf{a}_x)\mathbf{a}_z.$$
+If $E_0>u_0B_0$, the electron moves on x-z direction, closer to z direction and y direction;
+
+If $E_0<u_0B_0$, the electron moves on x-z direction, closer to x direction and y direction;
+
+If $E_0=u_0B_0$, the electron moves on the midline of x-z direction and y direction.
+\end{enumerate}
+
+\subsection{6-12}
+$$\mathbf{B}=\mathbf{a}_x\cdot\frac{\mu_0Ib^2N}{2}\left\{[(x+d/2)^2+b^2]^{-3/2}+[(x-d/2)^2+b^2]^{-3/2}\right\}.$$
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{B}(x=0)=\mathbf{a}_x\cdot\mu_0Ib^2N[(d/2)^2+b^2]^{-3/2}.$$
+\item
+$$\frac{dB_x}{dx}=\frac{\mu_0Ib^2N}{2}\left\{-\frac{3}{2}[(x+d/2)^2+b^2]^{-5/2}(2x+d)-\frac{3}{2}[(x-d/2)^2+b^2]^{-5/2}(2x-d)\right\},$$
+$$\frac{dB_x(0)}{dx}=\frac{\mu_0Ib^2N}{2}\left\{-\frac{3}{2}[(d/2)^2+b^2]^{-5/2}d-\frac{3}{2}[(d/2)^2+b^2]^{-5/2}(-d)\right\}=0.$$
+\item
+\begin{align*}
+\frac{d^2B_x}{dx^2}=\frac{3\mu_0Ib^2N}{4}&\left\{\frac{5}{2}[(x+d/2)^2+b^2]^{-7/2}(2x+d)^2-2[(x+d/2)^2+b^2]^{-5/2}\right.\\
+&\left.+\frac{5}{2}[(x-d/2)^2+b^2]^{-7/2}(2x-d)^2-2[(x-d/2)^2+b^2]^{-5/2}\right\},
+\end{align*}
+$$\frac{d^2B_x(0)}{dx^2}=\frac{3\mu_0Ib^2N}{4}\left\{5d^2[(d/2)^2+b^2]^{-7/2}-4[(d/2)^2+b^2]^{-5/2}\right\}=0,$$
+$$5d^2[(d/2)^2+b^2]^{-1}-4=0,$$
+$$b=d.$$
+\end{enumerate}
+
+\subsection{6-24}
+\begin{enumerate}[label=\alph*)]
+\item
+\begin{align*}
+V_m&=\int\frac{I\mathbf{a}_n\cdot\mathbf{a}_R}{4\pi(z^2+r^2)} dS\\
+&=\int_0^{2\pi}\int_0^b \frac{I}{4\pi(z^2+r^2)}\frac{z}{\sqrt{z^2+r^2}}rdrd\theta\\
+&=\frac{I}{8\pi}\int_0^{2\pi}\int_{z^2}^{z^2+b^2}z(z^2+r^2)^{-3/2}d(z^2+r^2)d\theta\\
+&=\frac{I}{8\pi}\int_0^{2\pi}2[1-z(z^2+b^2)^{-1/2}]d\theta\\
+&=\frac{I}{2}\left(1-\frac{z}{\sqrt{z^2+b^2}}\right).
+\end{align*}
+\item
+\begin{align*}
+\mathbf{B}&=-\mu_0\nabla V_m\\
+&=-\mu_0\cdot\mathbf{a}_z\frac{I}{2}\left(-\frac{\sqrt{z^2+b^2}-2z\cdot\frac{1}{2}/\sqrt{z^2+b^2}\cdot z}{z^2+b^2}\right)\\
+&=\mathbf{a}_z\frac{\mu_0I}{2}\left(\frac{z^2+b^2-z^2}{(z^2+b^2)^{3/2}}\right)\\
+&=\mathbf{a}_z\frac{\mu_0Ib^2}{2(z^2+b^2)^{3/2}}.
+\end{align*}
+\end{enumerate}
+
+\subsection{6-27}
+\begin{enumerate}[label=\alph*)]
+\item
+$$R_g=\frac{l_g}{\mu_0A}=\frac{\SI{3}{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{1.216e6}{\per\henry}.$$
+$$R_c=\frac{l_c}{\mu_0\mu_cA}=\frac{(2\pi\cdot 80-3)\si{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot3000\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{6.75e4}{\per\henry}.$$
+\item
+$$\mathbf{B}_g=\mathbf{B}_c=\mathbf{a}_\phi\frac{\Phi}{A}=\mathbf{a}_\phi\frac{\SI{1e-5}{\weber}}{\pi(\SI{25}{\milli\meter})^2}={a}_\phi\SI{5.093e-3}{\tesla},$$
+$$\mathbf{H}_g=\frac{\mathbf{B}_g}{\mu_0}=\frac{\SI{5.093e-3}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}}={a}_\phi\SI{4.052e3}{A/m},$$
+$$\mathbf{H}_c=\frac{\mathbf{B}_c}{\mu_0\mu_c}=\frac{\SI{5.093e-3}{\tesla}}{3000\cdot4\pi\times\SI{e-7}{\henry/\meter}}={a}_\phi\SI{1.351e3}{A/m}.$$
+\item
+$$\Phi=\frac{NI_0}{R_g+R_c},$$
+$$I_0=\frac{\Phi(R_g+R_c)}{N}=\frac{\SI{1e-5}{\weber}\cdot(\SI{1.216e6}{\per\henry}+\SI{6.75e4}{\per\henry})}{500}=\SI{2.567e-2}{\ampere}.$$
+\end{enumerate}
+
+\subsection{6-31}
+Let $L_1$ be the left and right legs, $L_2$ be the core of the center leg, $L_3$ be the air gap.
+$$R_1=\frac{L_1}{\mu_0\mu_cA}=\frac{(0.2+0.2+0.24)\si{\meter}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{1.019e5}{\per\henry},$$
+$$R_2=\frac{L_2}{\mu_0\mu_cA}=\frac{(0.24-0.002)\si{\meter}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{3.788e4}{\per\henry},$$
+$$R_3=\frac{L_3}{\mu_0A}=\frac{0.002\si{\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{1.592e6}{\per\henry}.$$
+\begin{enumerate}[label=\alph*)]
+\item
+In the center leg,
+$$\Phi_2=\frac{NI}{0.5R_1+R_2+R_3}=\frac{200\cdot\SI{3}{\ampere}}{(0.5\cdot\num{1.019e5}+\num{3.788e4}+\num{1.592e6})\si{\per\henry}}=\SI{3.570e-4}{\tesla}.$$
+In the left and right leg,
+$$\Phi_1=0.5\Phi_2=\SI{1.785e-4}{\tesla}.$$
+\item
+$$H_1=\frac{\Phi_1}{\mu_0\mu_cA}=\frac{\SI{1.785e-4}{\tesla}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{2.841e1}{\ampere/\meter},$$
+$$H_2=\frac{\Phi_2}{\mu_0\mu_cA}=\frac{\SI{3.570e-4}{\tesla}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{5.682e1}{\ampere/\meter},$$
+$$H_3=\frac{\Phi_3}{\mu_0A}=\frac{\SI{3.570e-4}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{2.841e5}{\ampere/\meter}.$$
+\end{enumerate}
+
+\subsection{6-31}
+$$B_{1n}=B_{2n},\quad -\mu_1\frac{\partial V_{m1}}{\partial n}=-\mu_2\frac{\partial V_{m2}}{\partial n}.$$
+$$H_{1t}=H_{2t},\quad \frac{\partial V_{m1}}{\partial t}=\frac{\partial V_{m2}}{\partial t}.$$
+
+\subsection{6-39}
+\begin{align*}
+L&=\frac{N\Phi}{I}\\&=\frac{1}{I}\int\mathbf{B}d\mathbf{S}\\&=\frac{1}{I}\int_0^{2\pi}\int_0^b\frac{\mu_0I}{2\pi(d+r\cos\theta)}rdrd\theta\\&=-\mu_0\int_0^b\frac{r}{\sqrt{d^2-r^2}}dr\\&=\mu_0(d-\sqrt{d^2-b^2}).
+\end{align*}
+
+\subsection{6-43}
+$$B=\frac{\mu_0I}{2\pi r},$$
+$$dB=\frac{\mu_0I}{2\pi \sqrt{x^2+D^2}}\cdot\frac{dx}{w},$$
+$$dF=dB\cdot IL=\frac{\mu_0I}{2\pi \sqrt{x^2+D^2}}\cdot\frac{dx}{w}\cdot IL\frac{D}{\sqrt{x^2+D^2}}=\frac{\mu_0DI^2L}{2\pi w(x^2+d^2)}dx,$$
+$$F=\int_{-w/2}^{w/2}\frac{\mu_0DI^2L}{2\pi w(x^2+d^2)}dx=\frac{\mu_0I^2L}{\pi w}\arctan\frac{w}{2D},$$
+$$\frac{F}{L}=\frac{\mu_0I^2}{\pi w}\arctan\frac{w}{2D}.$$
+
+\subsection{6-48}
+$$W_m=\frac{x}{2\mu_0}\int_a^bB^2 2\pi rdr=\frac{\mu_0I^2x}{4\pi}\int_a^b\frac{1}{r}rdr=\frac{\mu_0I^2x}{4\pi}\ln\frac{b}{a},$$
+$$\mathbf{F}=-\nabla W_m=-\mathbf{a}_x\frac{\mu_0I^2}{4\pi}\ln\frac{b}{a}.$$
+
+\subsection{6-53}
+$$B_g=\frac{\mu_0 NI}{L}=\mu_0 nI,$$
+$$B_c=\frac{\mu NI}{L}=\mu nI.$$
+$$W_m=\frac{B_g^2}{2\mu_0}S(L-x)+\frac{B_c^2}{2\mu}Sx=\frac{1}{2}n^2I^2S[(\mu-\mu_0)x+\mu_0)],$$
+$$\mathbf{F}=-\nabla W_m=-\mathbf{a}_x\frac{1}{2}n^2I^2S(\mu-\mu_0).$$
+
+\end{document}

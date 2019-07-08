@@ -41,9 +41,84 @@ $$V=\frac{V_0}{d}x,\quad \mathbf{E}=-\frac{V_0}{d}\mathbf{a_x}.$$
 \end{enumerate}
 
 \subsection{4-5}
+\begin{enumerate}[label=\alph*)]
+\item
+$$R_+=[x^2+(y-d)^2+z^2]^{1/2},$$
+$$R_-=[x^2+(y+d)^2+z^2]^{1/2},$$
+$$\frac{\partial R_+}{\partial x}=\frac{1}{2R_+}\cdot2x=\frac{x}{R_+},\frac{\partial R_-}{\partial x}=\frac{1}{2R_-}\cdot2x=\frac{x}{R_-},$$
+$$\frac{\partial V}{\partial x}=\frac{Q}{4\pi\epsilon_0}\left(\frac{\partial R_+^{-1}}{\partial R_+}\cdot\frac{\partial R_+}{\partial x}-\frac{\partial R_+^{-1}}{\partial R_-}\cdot\frac{\partial R_-}{\partial x}\right)=\frac{Q}{4\pi\epsilon_0}(-R_+^{-3}x+R_-^{-3}x),$$
+$$\frac{\partial^2 V}{\partial x^2}=\frac{Q}{4\pi\epsilon_0}\left(-\frac{\partial R_+^{-3}x}{\partial R_+}\cdot\frac{\partial R_+}{\partial x}+\frac{\partial R_-^{-3}x}{\partial R_-}\cdot\frac{\partial R_-}{\partial x}\right)=\frac{Q}{4\pi\epsilon_0}(3R_+^{-5}x^2-R_+^{-3}-3R_-^{-5}x^2+R_-^{-3}).$$
+Similarly,
+$$\frac{\partial^2 V}{\partial y^2}=\frac{Q}{4\pi\epsilon_0}[3R_+^{-5}(y-d)^2-R_+^{-3}-3R_-^{-5}(y+d)^2+R_-^{-3}],$$
+$$\frac{\partial^2 V}{\partial z^2}=\frac{Q}{4\pi\epsilon_0}(3R_+^{-5}z^2-R_+^{-3}-3R_-^{-5}z^2+R_-^{-3}),$$
+$$\nabla^2 V=\frac{\partial^2 V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2}+\frac{\partial^2 V}{\partial z^2}=\frac{Q}{4\pi\epsilon_0}\{3R_+^{-5}[x^2+(y-d)^2+z^2]-3R_+^{-3}-3R_-^{-5}[x^2+(y+d)^2+z^2]+3R_-^{-3}\}=0.$$
+\item
+$$V(x,0,z)=\frac{Q}{4\pi\epsilon_0}\left[\frac{1}{(x^2+d^2+z^2)^{1/2}}-\frac{1}{(x^2+d^2+z^2)^{1/2}}\right]+k=V_0,$$
+$$V(x,y,z)=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_+}-\frac{1}{R_-}\right)+V_0.$$
+\item
+$$F=\frac{1}{4\pi\epsilon_0}\cdot\frac{Q^2}{4d^2}=\frac{Q^2}{16\pi\epsilon_0d^2}.$$
+\end{enumerate}
 
+\subsection{4-11}
 
+\subsection{4-14}
+\begin{enumerate}[label=\alph*)]
+\item
+$$C_1=\frac{1}{2D}(a_2^2-a_1^2-D^2),\quad C_2=\frac{1}{2D}(a^2-a_1^2+D^2),\quad b^2=c_1^2-a_1^2.$$
+$$V_1=\frac{\rho_l}{2\pi\epsilon_0}\ln\frac{b+(c_1-a_1)}{b-(c_1-a_1)},$$
+$$V_2=\frac{\rho_l}{2\pi\epsilon_0}\ln\frac{b+(c_2-a_2)}{b-(c_2-a_2)},$$
+$$C=\frac{\rho_l}{V_1-V_2}=2\pi\epsilon_0\ln\left[\frac{b+(c_1-a_1)}{b-(c_1-a_1)}\cdot\frac{b-(c_1-a_1)}{b+(c_1-a_1)}\right]^{-1}.$$
+\item
+$$F=\frac{1}{2\pi\epsilon_0}\cdot\frac{\rho_l^2}{4b^2}.$$
+\end{enumerate}
+
+\subsection{4-17}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V_1(x,y,z)=\frac{1}{4\pi\epsilon_0}\left(\frac{Q}{R_+}-\frac{Q_1}{R_-}\right),$$
+$$R_+=[(x-d)^2+y^2+z^2]^{1/2},$$
+$$R_-=[(x+d)^2+y^2+z^2]^{1/2}.$$
+Similar to P. 4-5,
+$$\nabla^2 V_1=\frac{Q}{4\pi\epsilon_0}\{3R_+^{-5}[(x-d)^2+y^2+z^2]-3R_+^{-3}\}-\frac{Q_1}{4\pi\epsilon_0}\{3R_-^{-5}[(x+d)^2+y^2+z^2]-3R_-^{-3}\}=0.$$
+\item
+$$V_2(x,y,z)=\frac{1}{4\pi\epsilon_0}\left(\frac{Q}{R_+}+\frac{Q_2}{R_+}\right)$$
+Similar to P. 4-5,
+$$\nabla^2 V_2=\frac{Q+Q_2}{4\pi\epsilon_0}\{3R_+^{-5}[(x-d)^2+y^2+z^2]-3R_+^{-3}\}=0.$$
+\item
+When $x=0$, $R_+=R_-=R=[d^2+y^2+z^2]^{1/2},$
+$$\frac{\partial V_1}{\partial x}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}(x-d)+Q_1R_-^{-3}(x+d)]=\frac{d}{4\pi\epsilon_0R^3}(Q+Q_1),$$
+$$\frac{\partial V_2}{\partial x}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}(x-d)-Q_2R_+^{-3}(x-d)]=\frac{d}{4\pi\epsilon_0R^3}(Q+Q_2),$$
+$$\frac{\partial V_1}{\partial y}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}y+Q_1R_-^{-3}y]=\frac{1}{4\pi\epsilon_0R^3}(-Q+Q_1),$$
+$$\frac{\partial V_2}{\partial y}=\frac{1}{4\pi\epsilon_0}[-QR_+^{-3}y-Q_2R_+^{-3}y]=\frac{1}{4\pi\epsilon_0R^3}(-Q-Q_2).$$
+Since
+$$\frac{\partial V_1}{\partial x}=\frac{\partial V_2}{\partial x},\quad\epsilon_1\frac{\partial V_1}{\partial y}=\epsilon_2\frac{\partial V_1}{\partial y},$$
+$$Q_1=Q_2=\frac{\epsilon_2-\epsilon_1}{\epsilon_2+\epsilon_1}Q.$$
+\end{enumerate}
+
+\subsection{4-23}
+$$\nabla^2 V=\frac{1}{r^2}\cdot\frac{\partial^2V}{\partial\phi^2}=0.$$
+\begin{enumerate}[label=\alph*)]
+\item
+When $\phi=0$, $V=0$; when $\phi=\alpha$, $V=V_0$,
+$$V=C_1\phi+C_2=\frac{V_0}{\alpha}\phi.$$
+\item
+When $\phi=2pi$, $V=0$; when $\phi=\alpha$, $V=V_0$,
+$$V=C_1\phi+C_2=\frac{V_0}{\alpha-2\pi}(\phi-2\pi).$$
+\end{enumerate}
+
+\subsection{4-28}
+\begin{enumerate}[label=\alph*)]
+\item
+$$V(b,\theta)=V_0,$$
+$$V(R,\theta)=B_0R^{-1}+(B_1R^{-2}-E_0R)\cos\theta+\sum_{n=2}^\infty B_nR^{-n-1}P_n\cos\theta,\quad R\geqslant b.$$
+Since the sphere is charged, $B_0=bV_0$, we can obtain $B_1=E_0b^3$ and $B_n=0$ for $n\geqslant2$.
+$$V(R,\theta)=\frac{bV_0}{R}-E_0\left[1-\left(\frac{b}{R}\right)^3\right]R\cos\theta,\quad R\geqslant b.$$
+\item
+$$\mathbf{E}(R,\theta)=\mathbf{a}_RE_R+\mathbf{a}_\theta E_\theta,$$
+where
+$$E_R=-\frac{\partial V}{\partial R}=-\frac{bV_0}{R^2}+E_0\left[1+2\left(\frac{b}{R}\right)^3\right]\cos\theta,\quad R\geqslant b,$$
+$$E_\theta=-\frac{\partial V}{R\partial \theta}=-E_0\left[1-\left(\frac{b}{R}\right)^3\right]R\sin\theta,\quad R\geqslant b.$$
+\end{enumerate}
 
 \end{document}
-
 

@@ -21,15 +21,57 @@
 $$R_g=\frac{l_g}{\mu_0A}=\frac{\SI{3}{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{1.216e6}{\per\henry}.$$
 $$R_c=\frac{l_c}{\mu_0\mu_cA}=\frac{(2\pi\cdot 80-3)\si{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot3000\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{6.75e4}{\per\henry}.$$
 \item
-$$\mathbf{B}_g=\mathbf{B}_c=\mathbf{a}_\phi\frac{\Phi}{A}=\mathbf{a}_\phi=\frac{\SI{1e-5}{\weber}}{\pi(\SI{25}{\milli\meter})^2}=\SI{5.093e-3}{\tesla},$$
-$$\mathbf{H}_g=\frac{\mathbf{B}_g}{\mu_0}=\frac{\SI{5.093e-3}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}}=\SI{4.052e3}{A/m},$$
-$$\mathbf{H}_c=\frac{\mathbf{B}_c}{\mu_0\mu_c}=\frac{\SI{5.093e-3}{\tesla}}{3000\cdot4\pi\times\SI{e-7}{\henry/\meter}}=\SI{1.351e3}{A/m}.$$
+$$\mathbf{B}_g=\mathbf{B}_c=\mathbf{a}_\phi\frac{\Phi}{A}=\mathbf{a}_\phi\frac{\SI{1e-5}{\weber}}{\pi(\SI{25}{\milli\meter})^2}={a}_\phi\SI{5.093e-3}{\tesla},$$
+$$\mathbf{H}_g=\frac{\mathbf{B}_g}{\mu_0}=\frac{\SI{5.093e-3}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}}={a}_\phi\SI{4.052e3}{A/m},$$
+$$\mathbf{H}_c=\frac{\mathbf{B}_c}{\mu_0\mu_c}=\frac{\SI{5.093e-3}{\tesla}}{3000\cdot4\pi\times\SI{e-7}{\henry/\meter}}={a}_\phi\SI{1.351e3}{A/m}.$$
 \item
-$$\Phi=BA=\frac{NI_0}{R_g+R_c},$$
+$$\Phi=\frac{NI_0}{R_g+R_c},$$
 $$I_0=\frac{\Phi(R_g+R_c)}{N}=\frac{\SI{1e-5}{\weber}\cdot(\SI{1.216e6}{\per\henry}+\SI{6.75e4}{\per\henry})}{500}=\SI{2.567e-2}{\ampere}.$$
 \end{enumerate}
 
 \subsection{6-31}
+Let $L_1$ be the left and right legs, $L_2$ be the core of the center leg, $L_3$ be the air gap.
+$$R_1=\frac{L_1}{\mu_0\mu_cA}=\frac{(0.2+0.2+0.24)\si{\meter}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{1.019e5}{\per\henry},$$
+$$R_2=\frac{L_2}{\mu_0\mu_cA}=\frac{(0.24-0.002)\si{\meter}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{3.788e4}{\per\henry},$$
+$$R_3=\frac{L_3}{\mu_0A}=\frac{0.002\si{\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{1.592e6}{\per\henry}.$$
+\begin{enumerate}[label=\alph*)]
+\item
+In the center leg,
+$$\Phi_2=\frac{NI}{0.5R_1+R_2+R_3}=\frac{200\cdot\SI{3}{\ampere}}{(0.5\cdot\num{1.019e5}+\num{3.788e4}+\num{1.592e6})\si{\per\henry}}=\SI{3.570e-4}{\tesla}.$$
+In the left and right leg,
+$$\Phi_1=0.5\Phi_2=\SI{1.785e-4}{\tesla}.$$
+\item
+$$H_1=\frac{\Phi_1}{\mu_0\mu_cA}=\frac{\SI{1.785e-4}{\tesla}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{2.841e1}{\ampere/\meter},$$
+$$H_2=\frac{\Phi_2}{\mu_0\mu_cA}=\frac{\SI{3.570e-4}{\tesla}}{5000\cdot4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{5.682e1}{\ampere/\meter},$$
+$$H_3=\frac{\Phi_3}{\mu_0A}=\frac{\SI{3.570e-4}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\SI{e-3}{\meter\squared}}=\SI{2.841e5}{\ampere/\meter}.$$
+\end{enumerate}
+
+\subsection{6-31}
+$$B_{1n}=B_{2n},\quad -\mu_1\frac{\partial V_{m1}}{\partial n}=-\mu_2\frac{\partial V_{m2}}{\partial n}.$$
+$$H_{1t}=H_{2t},\quad \frac{\partial V_{m1}}{\partial t}=\frac{\partial V_{m2}}{\partial t}.$$
+
+\subsection{6-39}
+\begin{align*}
+L&=\frac{N\Phi}{I}\\&=\frac{1}{I}\int\mathbf{B}d\mathbf{S}\\&=\frac{1}{I}\int_0^{2\pi}\int_0^b\frac{\mu_0I}{2\pi(d+r\cos\theta)}rdrd\theta\\&=-\mu_0\int_0^b\frac{r}{\sqrt{d^2-r^2}}dr\\&=\mu_0(d-\sqrt{d^2-b^2}).
+\end{align*}
+
+\subsection{6-43}
+$$B=\frac{\mu_0I}{2\pi r},$$
+$$dB=\frac{\mu_0I}{2\pi \sqrt{x^2+D^2}}\cdot\frac{dx}{w},$$
+$$dF=dB\cdot IL=\frac{\mu_0I}{2\pi \sqrt{x^2+D^2}}\cdot\frac{dx}{w}\cdot IL\frac{D}{\sqrt{x^2+D^2}}=\frac{\mu_0DI^2L}{2\pi w(x^2+d^2)}dx,$$
+$$F=\int_{-w/2}^{w/2}\frac{\mu_0DI^2L}{2\pi w(x^2+d^2)}dx=\frac{\mu_0I^2L}{\pi w}\arctan\frac{w}{2D},$$
+$$\frac{F}{L}=\frac{\mu_0I^2}{\pi w}\arctan\frac{w}{2D}.$$
+
+\subsection{6-48}
+$$W_m=\frac{x}{2\mu_0}\int_a^bB^2 2\pi rdr=\frac{\mu_0I^2x}{4\pi}\int_a^b\frac{1}{r}rdr=\frac{\mu_0I^2x}{4\pi}\ln\frac{b}{a},$$
+$$\mathbf{F}=-\nabla W_m=-\mathbf{a}_x\frac{\mu_0I^2}{4\pi}\ln\frac{b}{a}.$$
+
+\subsection{6-53}
+$$B_g=\frac{\mu_0 NI}{L}=\mu_0 nI,$$
+$$B_c=\frac{\mu NI}{L}=\mu nI.$$
+$$W_m=\frac{B_g^2}{2\mu_0}S(L-x)+\frac{B_c^2}{2\mu}Sx=\frac{1}{2}n^2I^2S[(\mu-\mu_0)x+\mu_0)],$$
+$$\mathbf{F}=-\nabla W_m=-\mathbf{a}_x\frac{1}{2}n^2I^2S(\mu-\mu_0).$$
+
 
 \end{document}
 
