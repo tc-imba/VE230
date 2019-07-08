@@ -1,0 +1,36 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{6}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{6-27}
+\begin{enumerate}[label=\alph*)]
+\item
+$$R_g=\frac{l_g}{\mu_0A}=\frac{\SI{3}{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{1.216e6}{\per\henry}.$$
+$$R_c=\frac{l_c}{\mu_0\mu_cA}=\frac{(2\pi\cdot 80-3)\si{\milli\meter}}{4\pi\times\SI{e-7}{\henry/\meter}\cdot3000\cdot\pi(\SI{25}{\milli\meter})^2}=\SI{6.75e4}{\per\henry}.$$
+\item
+$$\mathbf{B}_g=\mathbf{B}_c=\mathbf{a}_\phi\frac{\Phi}{A}=\mathbf{a}_\phi=\frac{\SI{1e-5}{\weber}}{\pi(\SI{25}{\milli\meter})^2}=\SI{5.093e-3}{\tesla},$$
+$$\mathbf{H}_g=\frac{\mathbf{B}_g}{\mu_0}=\frac{\SI{5.093e-3}{\tesla}}{4\pi\times\SI{e-7}{\henry/\meter}}=\SI{4.052e3}{A/m},$$
+$$\mathbf{H}_c=\frac{\mathbf{B}_c}{\mu_0\mu_c}=\frac{\SI{5.093e-3}{\tesla}}{3000\cdot4\pi\times\SI{e-7}{\henry/\meter}}=\SI{1.351e3}{A/m}.$$
+\item
+$$\Phi=BA=\frac{NI_0}{R_g+R_c},$$
+$$I_0=\frac{\Phi(R_g+R_c)}{N}=\frac{\SI{1e-5}{\weber}\cdot(\SI{1.216e6}{\per\henry}+\SI{6.75e4}{\per\henry})}{500}=\SI{2.567e-2}{\ampere}.$$
+\end{enumerate}
+
+\subsection{6-31}
+
+\end{document}
+
+
