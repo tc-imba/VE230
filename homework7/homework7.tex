@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{7}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{7-2}
+\begin{align*}
+\Phi&=\int\mathbf{B}d\mathbf{S}=\int_0^{0.2}\int_0^{0.6}3\cos\left(5\pi10^7t-\frac{2}{3}\pi x\right)dxdy\cdot10^{-6}\\&=\frac{\num{9e-7}}{\pi}[\sin(5\pi10^7t)+\sin(0.4\pi-5\pi10^7t)]\si{\weber}.
+\end{align*}
+$$V=-\frac{d\Phi}{dt}=-45[\cos(5\pi10^7t)-\cos(0.4\pi-5\pi10^7t)],$$
+$$i=\frac{V}{2R}=-1.5[\cos(5\pi10^7t)-\cos(0.4\pi-5\pi10^7t)].$$
+
+\subsection{7-6}
+\begin{enumerate}[label=\alph*)]
+\item
+$$dR=\frac{2\pi r}{\sigma hdr},$$
+$$V=\frac{d\Phi}{dt}=\frac{d(B_0\sin\omega t\cdot \pi r^2)}{dt}=B_0\omega\pi r^2\cos\omega t,$$
+$$dP=\frac{V^2}{dR}=\frac{B_0^2\omega^2\pi^2 r^4\cos^2\omega t\cdot\sigma hdr}{2\pi r}=\frac{1}{2}B_0^2\omega^2\pi r^3h\sigma\cos^2\omega t\cdot dr,$$
+$$P=\int dP=\int_0^R\frac{1}{2}B_0^2\omega^2\pi r^3h\sigma\cos^2\omega t\cdot dr=\frac{1}{8}B_0^2\omega^2\pi R^4h\sigma\cos^2\omega t,$$
+$$\overline{P}=\frac{1}{2\pi}\int_0^{2\pi}\frac{1}{8}B_0^2\omega^2\pi R^4h\sigma\cos^2\omega t dt=\frac{1}{16}B_0^2\omega^2\pi R^4h\sigma.$$
+\item
+$$0.95\pi R^2=N\cdot \pi R'^2,$$
+$$R'^2=\sqrt{\frac{0.95}{N}}R,$$
+$$\overline{P'}=N\cdot\frac{1}{16}B_0^2\omega^2\pi R'^4h\sigma=\frac{0.95^2}{16N}B_0^2\omega^2\pi R^4h\sigma.$$
+\end{enumerate}
+
+\subsection{7-11}
+$$\nabla\times\mathbf{E}=-\frac{\partial B}{\partial t},$$
+$$\nabla\cdot(\nabla\times\mathbf{E})=-\frac{\partial}{\partial t}(\nabla\cdot\mathbf{B})=0.$$
+So $\nabla\cdot\mathbf{B}$ is a constant, and $\mathbf{B}=\mathbf{0}$ in infinite distance, which means $\nabla\cdot\mathbf{B}=0$ at that point, so that $\nabla\cdot\mathbf{B}=0$ always stands.
+
+$$\nabla\times\mathbf{H}=\mathbf{J}+\frac{\partial D}{\partial t},$$
+$$\nabla\cdot(\nabla\times\mathbf{H})=\nabla\cdot\mathbf{J}+\frac{\partial}{\partial t}(\nabla\cdot\mathbf{D})=-\frac{\partial\rho}{\partial t}+\frac{\partial}{\partial t}(\nabla\cdot\mathbf{D}),$$
+$$\nabla\cdot\mathbf{D}=\rho.$$
+
+\subsection{7-12}
+$$\left\{\begin{aligned}
+\nabla^2V-\mu\varepsilon\frac{\partial^2V}{\partial t^2}=-\frac{\rho}{\varepsilon} \\
+\nabla^2\mathbf{A}-\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}=-\mu\mathbf{J}
+\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}
+\rho=\varepsilon\left(\mu\varepsilon\frac{\partial^2V}{\partial t^2}-\nabla^2V\right) \\
+\mathbf{J}=\frac{1}{\mu}\left(\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}-\nabla^2\mathbf{A}\right) \\
+\end{aligned}\right.,$$
+$$-\frac{\partial\rho}{\partial t}=-\varepsilon\left(\mu\varepsilon\frac{\partial^3V}{\partial t^3}-\nabla^2\frac{\partial V}{\partial t}\right),$$
+$$\nabla\cdot\mathbf{A}=-\mu\varepsilon\frac{\partial V}{\partial t},$$
+$$\nabla\cdot\mathbf{J}=\frac{1}{\mu}\left(\mu\varepsilon\frac{\partial^2(\nabla\cdot\mathbf{A})}{\partial t^2}-\nabla^2(\nabla\cdot\mathbf{A})\right)=\varepsilon\left(\mu\varepsilon\frac{\partial^3V}{\partial t^3}-\nabla^2\frac{\partial V}{\partial t}\right),$$
+$$\nabla\cdot \mathbf{J}=-\frac{\partial\rho}{\partial t}.$$
+
+\subsection{7-14}
+\begin{align*}
+\mathbf{J}&=\nabla\times\mathbf{H}-\frac{\partial\mathbf{D}}{\partial t}\\
+&=\frac{1}{\mu}\nabla\times\mathbf{B}-\varepsilon\frac{\partial\mathbf{E}}{\partial t}\\
+&=\frac{1}{\mu}\nabla\times(\nabla\times\mathbf{A})+\varepsilon\nabla\frac{\partial V}{\partial t}+\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}\\
+&=\frac{1}{\mu}\nabla\times(\nabla\times\mathbf{A})-\frac{1}{\mu}\nabla(\nabla\cdot\mathbf{A})+\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2},
+\end{align*}
+$$\nabla^2\mathbf{A}-\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}=-\mu\mathbf{J}.$$
+$$\rho=\nabla\cdot\mathbf{D}=\varepsilon\nabla\cdot\mathbf{E}=-\varepsilon\nabla^2 V-\varepsilon\frac{\partial}{\partial t}(\nabla\cdot\mathbf{A})=-\varepsilon\nabla^2 V+\varepsilon\frac{\partial}{\partial t}\mu\varepsilon\frac{\partial V}{\partial t},$$
+$$\nabla^2V-\mu\varepsilon\frac{\partial^2V}{\partial t^2}=-\frac{\rho}{\varepsilon}.$$
+
+\subsection{7-17}
+\begin{enumerate}[label=\alph*)]
+\item
+$$E_{1t}=E_{2t},\quad B_{1n}=B_{2n}.$$
+\item
+$$D_{1n}=D_{2n},\quad H_{1t}=H_{2t}.$$
+\end{enumerate}
+
+\subsection{7-20}
+Let $u=t\pm R\sqrt{\mu\epsilon}$, $f(u)=U(R,t)$,
+$$\left(\frac{\partial u}{\partial R}\right)^2=\mu\varepsilon,\quad \left(\frac{\partial u}{\partial t}\right)^2=1.$$
+$$\frac{\partial^2 U}{\partial R^2}-\mu\epsilon\frac{\partial^2 U}{\partial t^2}=\frac{\partial^2 f}{\partial u^2}\left(\frac{\partial u}{\partial R}\right)^2-\mu\epsilon\frac{\partial^2 f}{\partial u^2}\left(\frac{\partial u}{\partial t}\right)^2=0.$$
+
+
+\end{document}
+
+
