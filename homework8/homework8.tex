@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{8}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{7-24}
+$$\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}=-\mu\frac{\partial\mathbf{H}}{\partial t},$$
+$$\nabla\times(\nabla\times\mathbf{E})=-\mu\frac{\partial}{\partial t}\left(\mathbf{J}+\frac{\partial\mathbf{D}}{\partial t}\right)=-\mu\frac{\partial\mathbf{J}}{\partial t}-\mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2},$$
+$$\nabla\times(\nabla\times\mathbf{E})=\nabla(\nabla\cdot\mathbf{E})-\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho-\nabla^2\mathbf{E},$$
+$$\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho+\mu\frac{\partial\mathbf{J}}{\partial t}+\mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2},$$
+$$\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho+\mu j\omega\mathbf{J}+\mu\varepsilon\omega^2\mathbf{E}.$$
+
+$$\nabla\times\mathbf{H}=\mathbf{J}+\frac{\partial\mathbf{D}}{\partial t},$$
+$$\nabla\times(\nabla\times\mathbf{H})=\nabla\times\mathbf{J}+\varepsilon\frac{\partial}{\partial t}(\nabla\times\mathbf{E})=\nabla\times\mathbf{J}-\mu\varepsilon\frac{\partial^2\mathbf{H}}{\partial t^2},$$
+$$\nabla\times(\nabla\times\mathbf{H})=\nabla(\nabla\cdot\mathbf{H})-\nabla^2\mathbf{H}=-\nabla^2\mathbf{H},$$
+$$\nabla^2\mathbf{H}=-\nabla\times\mathbf{J}+\mu\varepsilon\frac{\partial^2\mathbf{H}}{\partial t^2},$$
+$$\nabla^2\mathbf{H}=-\nabla\times\mathbf{J}+\mu\varepsilon\omega^2\mathbf{H}.$$
+
+\subsection{7-27}
+\begin{align*}
+\nabla\times\mathbf{E}&=\frac{1}{R^2\sin\theta}\begin{vmatrix}
+\mathbf{a}_R & \mathbf{a}_\theta R & \mathbf{a}_\phi R\sin\theta \\
+\frac{\partial}{\partial R} & \frac{\partial}{\partial\theta} & \frac{\partial}{\partial\phi} \\
+0 & E_0\sin\theta e^{-jkR} & 0 \end{vmatrix}\\
+&=\frac{1}{R^2\sin\theta}\left(\mathbf{a}_R\frac{\partial}{\partial\phi}E_0\sin\theta e^{-jkR}-\mathbf{a}_\phi R\sin\theta\frac{\partial}{\partial R}E_0\sin\theta e^{-jkR}\right)\\
+&=\mathbf{a}_\phi\frac{-E_0jk\sin\theta e^{-jkR}}{R},
+\end{align*}
+$$\nabla\times\mathbf{E} = -\mu\frac{\partial\mathbf{H}}{\partial t}=-j\mu\omega\mathbf{H},$$
+$$\mathbf{H}=\mathbf{a}_\phi\frac{E_0k\sin\theta e^{-jkR}}{\mu\omega R},\quad k=\omega\sqrt{\mu\varepsilon}.$$
+$$\mathbf{H}(R)=\mathbf{a}_\phi\frac{E_0\sqrt{\mu\varepsilon}\sin\theta e^{-j\omega\sqrt{\mu\varepsilon}R}}{\mu R},$$
+$$\mathbf{H}(R,t)=\text{Re}[\mathbf{H}(R)e^{j\omega t}]=\mathbf{a}_\phi\frac{E_0\sqrt{\mu\varepsilon}}{\mu R}\sin\theta\cos(\omega t-\omega\sqrt{\mu\varepsilon}R).$$
+\begin{enumerate}[label=\alph*)]
+\item
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
+
+
