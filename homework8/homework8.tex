@@ -44,20 +44,42 @@ $$\mathbf{H}(R,t)=\text{Re}[\mathbf{H}(R)e^{j\omega t}]=\mathbf{a}_\phi\frac{E_0
 
 \subsection{7-29}
 
-$$\nabla\times\mathbf{E}=-j\omega\mu_0\mathbf{H}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
-$$\nabla\times(\mathbf{E}-\omega^2\mu_0\varepsilon_0\nabla\times \pi_e)=\mathbf{0},$$
-$$\mathbf{E}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e+\mathbf{C}.$$
-
-$$\nabla\times\mathbf{H}=j\omega\mathbf{D}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
-
 \begin{enumerate}[label=\alph*)]
 \item
-
+$$\nabla\times\mathbf{E}=-j\omega\mu_0\mathbf{H}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
+$$\nabla\times(\mathbf{E}-\omega^2\mu_0\varepsilon_0\pi_e)=\mathbf{0},$$
+$$\mathbf{E}=\omega^2\mu_0\varepsilon_0\pi_e+\mathbf{C}.$$
+$$\nabla\times\mathbf{H}=j\omega\mathbf{D}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
+$$\nabla\times(j\omega\varepsilon_0\nabla\times\pi_e)=j\omega\varepsilon_0(\omega^2\mu_0\varepsilon_0\pi_e+\frac{\mathbf{P}}{\varepsilon_0}+\mathbf{C}),$$
+$$\nabla\times(\nabla\times\pi_e)=\nabla(\nabla\cdot\pi_e)-\nabla^2\pi_e=\omega^2\mu_0\varepsilon_0\pi_e+\frac{\mathbf{P}}{\varepsilon_0}+\mathbf{C},$$
+$$\nabla^2\pi_e+\omega^2\mu_0\varepsilon_0\pi_e=\nabla(\nabla\cdot\pi_e)-\frac{\mathbf{P}}{\varepsilon_0}-\mathbf{C},$$
+$$\mathbf{C}=\nabla(\nabla\cdot\pi_e),$$
+$$\mathbf{E}=\omega^2\mu_0\varepsilon_0\pi_e+\nabla(\nabla\cdot\pi_e).$$
+\item
+$$k_0^2=\omega^2\mu_0\varepsilon_0,$$
+$$\nabla^2\pi_e+k_0^2\pi_e=-\frac{\mathbf{P}}{\varepsilon_0}.$$
 \end{enumerate}
 
+\subsection{8-7}
+Let $\phi=\omega_t-kz$,
+$$\mathbf{E}(\phi)=\mathbf{a}_xE_{10}\sin\phi+\mathbf{a_y}E_{20}\sin(\phi+\psi),$$
+$$\frac{E_x}{E_{10}}=\sin\phi,$$
+$$\frac{E_y}{E_{20}}=\sin(\phi+\psi)=\sin\phi\cos\psi+\cos\phi\sin\psi=\frac{E_x}{E_{10}}\cos\psi+\sqrt{1-\left(\frac{E_x}{E_{10}}\right)^2}\sin\psi,$$
+$$\left[\sqrt{1-\left(\frac{E_x}{E_{10}}\right)^2}\sin\psi\right]^2=\left(\frac{E_y}{E_{20}}\right)^2+\left(\frac{E_x}{E_{10}}\cos\psi\right)^2-2\left(\frac{E_y}{E_{20}}\right)\left(\frac{E_x}{E_{10}}\cos\psi\right),$$
+$$\left(\frac{E_x}{E_{10}}\right)^2+\left(\frac{E_y}{E_{20}}\right)^2-2\frac{E_x}{E_{10}}\frac{E_y}{E_{20}}\cos\psi=\sin^2\psi,$$
+$$\left(\frac{E_x}{E_{10}\sin\psi}\right)^2+\left(\frac{E_y}{E_{20}\sin\psi}\right)^2-2\frac{E_x}{E_{10}}\frac{E_y}{E_{20}}\frac{\cos\psi}{sin^2\psi}=1.$$
 
-
-
+\subsection{8-9}
+$$\nabla^2\mathbf{E}+k_c^2\mathbf{E}=0,$$
+$$k_c=\omega\sqrt{\mu\varepsilon}=\beta-j\alpha,$$
+$$\omega^2\mu\varepsilon=\omega^2\mu(\varepsilon-j\sigma/\omega)=\beta^2-\alpha^2-2j\alpha\beta,$$
+$$\left\{\begin{aligned}
+\beta^2+\alpha^2&=\omega^2\mu\sqrt{\varepsilon^2+\sigma^2/\omega^2}\\
+\beta^2-\alpha^2&=\omega^2\mu\varepsilon\\
+\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}
+\alpha&=\omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma^2}{\omega\varepsilon}\right)^2}-1\right]^{1/2}\\
+\beta&=\omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma^2}{\omega\varepsilon}\right)^2}+1\right]^{1/2}
+\end{aligned}\right..$$
 
 \end{document}
 
