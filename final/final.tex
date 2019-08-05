@@ -1,0 +1,185 @@
+\documentclass[6pt,a4paper]{article}
+\usepackage{../ve230}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\subsection{7-2}
+\begin{align*}
+\Phi&=\int\mathbf{B}d\mathbf{S}=\int_0^{0.2}\int_0^{0.6}3\cos\left(5\pi10^7t-\frac{2}{3}\pi x\right)dxdy\cdot10^{-6}\\&=\frac{\num{9e-7}}{\pi}[\sin(5\pi10^7t)+\sin(0.4\pi-5\pi10^7t)]\si{\weber}.
+\end{align*}
+$$V=-\frac{d\Phi}{dt}=-45[\cos(5\pi10^7t)-\cos(0.4\pi-5\pi10^7t)],$$
+$$i=\frac{V}{2R}=-1.5[\cos(5\pi10^7t)-\cos(0.4\pi-5\pi10^7t)].$$
+
+\subsection{7-6}
+\begin{enumerate}[label=\alph*)]
+\item
+$$dR=\frac{2\pi r}{\sigma hdr},$$
+$$V=\frac{d\Phi}{dt}=\frac{d(B_0\sin\omega t\cdot \pi r^2)}{dt}=B_0\omega\pi r^2\cos\omega t,$$
+$$dP=\frac{V^2}{dR}=\frac{B_0^2\omega^2\pi^2 r^4\cos^2\omega t\cdot\sigma hdr}{2\pi r}=\frac{1}{2}B_0^2\omega^2\pi r^3h\sigma\cos^2\omega t\cdot dr,$$
+$$P=\int dP=\int_0^R\frac{1}{2}B_0^2\omega^2\pi r^3h\sigma\cos^2\omega t\cdot dr=\frac{1}{8}B_0^2\omega^2\pi R^4h\sigma\cos^2\omega t,$$
+$$\overline{P}=\frac{1}{2\pi}\int_0^{2\pi}\frac{1}{8}B_0^2\omega^2\pi R^4h\sigma\cos^2\omega t dt=\frac{1}{16}B_0^2\omega^2\pi R^4h\sigma.$$
+\item
+$$0.95\pi R^2=N\cdot \pi R'^2,$$
+$$R'^2=\sqrt{\frac{0.95}{N}}R,$$
+$$\overline{P'}=N\cdot\frac{1}{16}B_0^2\omega^2\pi R'^4h\sigma=\frac{0.95^2}{16N}B_0^2\omega^2\pi R^4h\sigma.$$
+\end{enumerate}
+
+\subsection{7-11}
+$$\nabla\times\mathbf{E}=-\frac{\partial B}{\partial t},$$
+$$\nabla\cdot(\nabla\times\mathbf{E})=-\frac{\partial}{\partial t}(\nabla\cdot\mathbf{B})=0.$$
+So $\nabla\cdot\mathbf{B}$ is a constant, and $\mathbf{B}=\mathbf{0}$ in infinite distance, which means $\nabla\cdot\mathbf{B}=0$ at that point, so that $\nabla\cdot\mathbf{B}=0$ always stands.
+
+$$\nabla\times\mathbf{H}=\mathbf{J}+\frac{\partial D}{\partial t},$$
+$$\nabla\cdot(\nabla\times\mathbf{H})=\nabla\cdot\mathbf{J}+\frac{\partial}{\partial t}(\nabla\cdot\mathbf{D})=-\frac{\partial\rho}{\partial t}+\frac{\partial}{\partial t}(\nabla\cdot\mathbf{D}),$$
+$$\nabla\cdot\mathbf{D}=\rho.$$
+
+\subsection{7-12}
+$$\left\{\begin{aligned}
+\nabla^2V-\mu\varepsilon\frac{\partial^2V}{\partial t^2}=-\frac{\rho}{\varepsilon} \\
+\nabla^2\mathbf{A}-\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}=-\mu\mathbf{J}
+\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}
+\rho=\varepsilon\left(\mu\varepsilon\frac{\partial^2V}{\partial t^2}-\nabla^2V\right) \\
+\mathbf{J}=\frac{1}{\mu}\left(\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}-\nabla^2\mathbf{A}\right) \\
+\end{aligned}\right.,$$
+$$-\frac{\partial\rho}{\partial t}=-\varepsilon\left(\mu\varepsilon\frac{\partial^3V}{\partial t^3}-\nabla^2\frac{\partial V}{\partial t}\right),$$
+$$\nabla\cdot\mathbf{A}=-\mu\varepsilon\frac{\partial V}{\partial t},$$
+$$\nabla\cdot\mathbf{J}=\frac{1}{\mu}\left(\mu\varepsilon\frac{\partial^2(\nabla\cdot\mathbf{A})}{\partial t^2}-\nabla^2(\nabla\cdot\mathbf{A})\right)=\varepsilon\left(\mu\varepsilon\frac{\partial^3V}{\partial t^3}-\nabla^2\frac{\partial V}{\partial t}\right),$$
+$$\nabla\cdot \mathbf{J}=-\frac{\partial\rho}{\partial t}.$$
+
+\subsection{7-14}
+\begin{align*}
+\mathbf{J}&=\nabla\times\mathbf{H}-\frac{\partial\mathbf{D}}{\partial t}\\
+&=\frac{1}{\mu}\nabla\times\mathbf{B}-\varepsilon\frac{\partial\mathbf{E}}{\partial t}\\
+&=\frac{1}{\mu}\nabla\times(\nabla\times\mathbf{A})+\varepsilon\nabla\frac{\partial V}{\partial t}+\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}\\
+&=\frac{1}{\mu}\nabla\times(\nabla\times\mathbf{A})-\frac{1}{\mu}\nabla(\nabla\cdot\mathbf{A})+\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2},
+\end{align*}
+$$\nabla^2\mathbf{A}-\mu\varepsilon\frac{\partial^2\mathbf{A}}{\partial t^2}=-\mu\mathbf{J}.$$
+$$\rho=\nabla\cdot\mathbf{D}=\varepsilon\nabla\cdot\mathbf{E}=-\varepsilon\nabla^2 V-\varepsilon\frac{\partial}{\partial t}(\nabla\cdot\mathbf{A})=-\varepsilon\nabla^2 V+\varepsilon\frac{\partial}{\partial t}\mu\varepsilon\frac{\partial V}{\partial t},$$
+$$\nabla^2V-\mu\varepsilon\frac{\partial^2V}{\partial t^2}=-\frac{\rho}{\varepsilon}.$$
+
+\subsection{7-17}
+\begin{enumerate}[label=\alph*)]
+\item
+$$E_{1t}=E_{2t},\quad B_{1n}=B_{2n}.$$
+\item
+$$D_{1n}=D_{2n},\quad H_{1t}=H_{2t}.$$
+\end{enumerate}
+
+\subsection{7-20}
+Let $u=t\pm R\sqrt{\mu\epsilon}$, $f(u)=U(R,t)$,
+$$\left(\frac{\partial u}{\partial R}\right)^2=\mu\varepsilon,\quad \left(\frac{\partial u}{\partial t}\right)^2=1.$$
+$$\frac{\partial^2 U}{\partial R^2}-\mu\epsilon\frac{\partial^2 U}{\partial t^2}=\frac{\partial^2 f}{\partial u^2}\left(\frac{\partial u}{\partial R}\right)^2-\mu\epsilon\frac{\partial^2 f}{\partial u^2}\left(\frac{\partial u}{\partial t}\right)^2=0.$$
+
+\subsection{7-24}
+$$\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}=-\mu\frac{\partial\mathbf{H}}{\partial t},$$
+$$\nabla\times(\nabla\times\mathbf{E})=-\mu\frac{\partial}{\partial t}\left(\mathbf{J}+\frac{\partial\mathbf{D}}{\partial t}\right)=-\mu\frac{\partial\mathbf{J}}{\partial t}-\mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2},$$
+$$\nabla\times(\nabla\times\mathbf{E})=\nabla(\nabla\cdot\mathbf{E})-\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho-\nabla^2\mathbf{E},$$
+$$\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho+\mu\frac{\partial\mathbf{J}}{\partial t}+\mu\varepsilon\frac{\partial^2\mathbf{E}}{\partial t^2},$$
+$$\nabla^2\mathbf{E}=\frac{1}{\varepsilon}\nabla\rho+\mu j\omega\mathbf{J}+\mu\varepsilon\omega^2\mathbf{E}.$$
+
+$$\nabla\times\mathbf{H}=\mathbf{J}+\frac{\partial\mathbf{D}}{\partial t},$$
+$$\nabla\times(\nabla\times\mathbf{H})=\nabla\times\mathbf{J}+\varepsilon\frac{\partial}{\partial t}(\nabla\times\mathbf{E})=\nabla\times\mathbf{J}-\mu\varepsilon\frac{\partial^2\mathbf{H}}{\partial t^2},$$
+$$\nabla\times(\nabla\times\mathbf{H})=\nabla(\nabla\cdot\mathbf{H})-\nabla^2\mathbf{H}=-\nabla^2\mathbf{H},$$
+$$\nabla^2\mathbf{H}=-\nabla\times\mathbf{J}+\mu\varepsilon\frac{\partial^2\mathbf{H}}{\partial t^2},$$
+$$\nabla^2\mathbf{H}=-\nabla\times\mathbf{J}+\mu\varepsilon\omega^2\mathbf{H}.$$
+
+\subsection{7-27}
+\begin{align*}
+\nabla\times\mathbf{E}&=\frac{1}{R^2\sin\theta}\begin{vmatrix}
+\mathbf{a}_R & \mathbf{a}_\theta R & \mathbf{a}_\phi R\sin\theta \\
+\frac{\partial}{\partial R} & \frac{\partial}{\partial\theta} & \frac{\partial}{\partial\phi} \\
+0 & E_0\sin\theta e^{-jkR} & 0 \end{vmatrix}\\
+&=\frac{1}{R^2\sin\theta}\left(\mathbf{a}_R\frac{\partial}{\partial\phi}E_0\sin\theta e^{-jkR}-\mathbf{a}_\phi R\sin\theta\frac{\partial}{\partial R}E_0\sin\theta e^{-jkR}\right)\\
+&=\mathbf{a}_\phi\frac{-E_0jk\sin\theta e^{-jkR}}{R},
+\end{align*}
+$$\nabla\times\mathbf{E} = -\mu\frac{\partial\mathbf{H}}{\partial t}=-j\mu\omega\mathbf{H},$$
+$$\mathbf{H}=\mathbf{a}_\phi\frac{E_0k\sin\theta e^{-jkR}}{\mu\omega R},\quad k=\omega\sqrt{\mu\varepsilon}.$$
+$$\mathbf{H}(R)=\mathbf{a}_\phi\frac{E_0\sqrt{\mu\varepsilon}\sin\theta e^{-j\omega\sqrt{\mu\varepsilon}R}}{\mu R},$$
+$$\mathbf{H}(R,t)=\text{Re}[\mathbf{H}(R)e^{j\omega t}]=\mathbf{a}_\phi\frac{E_0\sqrt{\mu\varepsilon}}{\mu R}\sin\theta\cos(\omega t-\omega\sqrt{\mu\varepsilon}R).$$
+
+\subsection{7-29}
+
+\begin{enumerate}[label=\alph*)]
+\item
+$$\nabla\times\mathbf{E}=-j\omega\mu_0\mathbf{H}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
+$$\nabla\times(\mathbf{E}-\omega^2\mu_0\varepsilon_0\pi_e)=\mathbf{0},$$
+$$\mathbf{E}=\omega^2\mu_0\varepsilon_0\pi_e+\mathbf{C}.$$
+$$\nabla\times\mathbf{H}=j\omega\mathbf{D}=\omega^2\mu_0\varepsilon_0\nabla\times \pi_e,$$
+$$\nabla\times(j\omega\varepsilon_0\nabla\times\pi_e)=j\omega\varepsilon_0(\omega^2\mu_0\varepsilon_0\pi_e+\frac{\mathbf{P}}{\varepsilon_0}+\mathbf{C}),$$
+$$\nabla\times(\nabla\times\pi_e)=\nabla(\nabla\cdot\pi_e)-\nabla^2\pi_e=\omega^2\mu_0\varepsilon_0\pi_e+\frac{\mathbf{P}}{\varepsilon_0}+\mathbf{C},$$
+$$\nabla^2\pi_e+\omega^2\mu_0\varepsilon_0\pi_e=\nabla(\nabla\cdot\pi_e)-\frac{\mathbf{P}}{\varepsilon_0}-\mathbf{C},$$
+$$\mathbf{C}=\nabla(\nabla\cdot\pi_e),$$
+$$\mathbf{E}=\omega^2\mu_0\varepsilon_0\pi_e+\nabla(\nabla\cdot\pi_e).$$
+\item
+$$k_0^2=\omega^2\mu_0\varepsilon_0,$$
+$$\nabla^2\pi_e+k_0^2\pi_e=-\frac{\mathbf{P}}{\varepsilon_0}.$$
+\end{enumerate}
+
+\subsection{8-7}
+Let $\phi=\omega_t-kz$,
+$$\mathbf{E}(\phi)=\mathbf{a}_xE_{10}\sin\phi+\mathbf{a_y}E_{20}\sin(\phi+\psi),$$
+$$\frac{E_x}{E_{10}}=\sin\phi,$$
+$$\frac{E_y}{E_{20}}=\sin(\phi+\psi)=\sin\phi\cos\psi+\cos\phi\sin\psi=\frac{E_x}{E_{10}}\cos\psi+\sqrt{1-\left(\frac{E_x}{E_{10}}\right)^2}\sin\psi,$$
+$$\left[\sqrt{1-\left(\frac{E_x}{E_{10}}\right)^2}\sin\psi\right]^2=\left(\frac{E_y}{E_{20}}\right)^2+\left(\frac{E_x}{E_{10}}\cos\psi\right)^2-2\left(\frac{E_y}{E_{20}}\right)\left(\frac{E_x}{E_{10}}\cos\psi\right),$$
+$$\left(\frac{E_x}{E_{10}}\right)^2+\left(\frac{E_y}{E_{20}}\right)^2-2\frac{E_x}{E_{10}}\frac{E_y}{E_{20}}\cos\psi=\sin^2\psi,$$
+$$\left(\frac{E_x}{E_{10}\sin\psi}\right)^2+\left(\frac{E_y}{E_{20}\sin\psi}\right)^2-2\frac{E_x}{E_{10}}\frac{E_y}{E_{20}}\frac{\cos\psi}{sin^2\psi}=1.$$
+
+\subsection{8-9}
+$$\nabla^2\mathbf{E}+k_c^2\mathbf{E}=0,$$
+$$k_c=\omega\sqrt{\mu\varepsilon}=\beta-j\alpha,$$
+$$\omega^2\mu\varepsilon=\omega^2\mu(\varepsilon-j\sigma/\omega)=\beta^2-\alpha^2-2j\alpha\beta,$$
+$$\left\{\begin{aligned}
+\beta^2+\alpha^2&=\omega^2\mu\sqrt{\varepsilon^2+\sigma^2/\omega^2}\\
+\beta^2-\alpha^2&=\omega^2\mu\varepsilon\\
+\end{aligned}\right.\Longrightarrow\left\{\begin{aligned}
+\alpha&=\omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma^2}{\omega\varepsilon}\right)^2}-1\right]^{1/2}\\
+\beta&=\omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma^2}{\omega\varepsilon}\right)^2}+1\right]^{1/2}
+\end{aligned}\right..$$
+
+\subsection{8-14}
+$$f_{max}=\frac{1}{2\pi}\sqrt{\frac{N_{max}e^2}{m\varepsilon_0}},$$
+$$\varepsilon_{min}=\varepsilon_0\left[1-\left(\frac{f_{max}}{f}\right)^2\right],$$
+$$\frac{1}{\sin\theta_i}=\sqrt{\frac{\varepsilon_0}{\varepsilon_{min}}},$$
+$$\varepsilon_{min}=\varepsilon_0\sin^2\theta_i=\varepsilon_0\left[1-\left(\frac{f_{max}}{f}\right)^2\right],$$
+$$f=\frac{f_{max}}{\cos\theta_i}=\frac{1}{2\pi\cos\theta_i}\sqrt{\frac{N_{max}e^2}{m\varepsilon_0}}.$$
+
+\subsection{8-15}
+\begin{enumerate}[label=\alph*)]
+\item
+$$u_g=\frac{dw}{d\beta}=\frac{d}{d\beta}(\beta u_p)=u_p+\beta\frac{du_p}{d\beta}.$$
+\item
+$$\lambda=\frac{2\pi}{\beta},$$
+$$\frac{d\lambda}{d\beta}=\frac{d}{d\beta}\left(\frac{2\pi}{\beta}\right)=-\frac{2\pi}{\beta^2}=-\frac{\lambda}{\beta},$$
+$$u_g=u_p+\beta\frac{du_p}{d\beta}=u_p+\beta\frac{du_p}{d\lambda}\cdot\frac{d\lambda}{d\beta}=u_p-\lambda\frac{du_p}{d\lambda}.$$
+\end{enumerate}
+
+\subsection{8-22}
+
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{E}_i(x,z)=\mathbf{a}_y10e^{-j(6x+8z)}=\mathbf{a}_yE_0e^{-jk_xx-jk_zz},$$
+$$E_0=10\quad k_x=6,\quad k_z=8,$$
+$$k=\sqrt{k_x^2+k_z^2}=10,$$
+$$\lambda=\frac{2\pi}{k}=0.2\pi~\si{\m}\approx\SI{0.628}{\m},$$
+$$f=\frac{c}{\lambda}=\SI{4.777e8}{\Hz}.$$
+\item
+$$\omega=2\pi f=\SI{3e9}{\radian\per\s},$$
+$$\eta_0=\frac{\omega\mu}{k}=120\pi~\Omega,$$
+$$\mathbf{E}_i(x,z,t)=\text{Re}[\mathbf{E}_i(x,z)e^{j\omega t}]=\mathbf{a_y}10\cos(\num{3e9}t-6x-8z)~\si{\V\per\m}.$$
+$$\mathbf{a}_{n_i}=\mathbf{a}_x\cdot\frac{k_x}{k}+\mathbf{a}_z\cdot\frac{k_z}{k},$$
+$$\mathbf{H}_i(x,z)=\frac{1}{\eta_0}(\mathbf{a}_{n_i}\times E_i(x,z))=\left(\frac{\mathbf{a}_z}{20\pi}-\frac{\mathbf{a}_x}{15\pi}\right)e^{-j(6x+8z)},$$
+$$\mathbf{H}_i(x,z,t)=\text{Re}[\mathbf{H}_i(x,z)e^{j\omega t}]=\left(\frac{\mathbf{a}_z}{20\pi}-\frac{\mathbf{a}_x}{15\pi}\right)\cos(\num{3e9}t-6x-8z)~\si{\A\per\m}.$$
+\item
+$$\theta_i=\arccos(\mathbf{a}_n\cdot\mathbf{a}_z)=\arccos0.8\approx0.644~\si{\radian}.$$
+\item
+$$\mathbf{E}_r(x,z)=-\mathbf{E}_i(x,-z)=-\mathbf{a}_y10e^{-j(6x-8z)},$$
+$$\mathbf{a}_{n_r}=\mathbf{a}_x\cdot\frac{k_x}{k}-\mathbf{a}_z\cdot\frac{k_z}{k}$$
+$$\mathbf{H}_r(x,z)=\frac{1}{\eta_0}(\mathbf{a}_{n_r}\times E_r(x,z))=-\left(\frac{\mathbf{a}_z}{20\pi}+\frac{\mathbf{a}_x}{15\pi}\right)e^{-j(6x-8z)}.$$
+\item
+$$\mathbf{E}_1(x,z)=\mathbf{E}_i(x,z)+\mathbf{E}_r(x,z)=-\mathbf{a}_y20je^{-j6x}\sin8z~\si{V\per\m},$$
+$$\mathbf{H}_1(x,z)=\mathbf{H}_i(x,z)+\mathbf{H}_r(x,z)=-\frac{\mathbf{a}_z}{10\pi}j\sin8z-\frac{\mathbf{a_x}}{15\pi}2\cos8z.$$
+\end{enumerate}
+
+
+\end{document}

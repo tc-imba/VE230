@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../ve230}
+
+\author{\href{liuyh615@sjtu.edu.cn}{Yihao Liu} (515370910207)}
+\semester{Summer}
+\year{2019}
+\subtitle{Homework}
+\subtitlenumber{9}
+\blockinfo{}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\maketitle
+
+\subsection{8-22}
+
+\begin{enumerate}[label=\alph*)]
+\item
+$$\mathbf{E}_i(x,z)=\mathbf{a}_y10e^{-j(6x+8z)}=\mathbf{a}_yE_0e^{-jk_xx-jk_zz},$$
+$$E_0=10\quad k_x=6,\quad k_z=8,$$
+$$k=\sqrt{k_x^2+k_z^2}=10,$$
+$$\lambda=\frac{2\pi}{k}=0.2\pi~\si{\m}\approx\SI{0.628}{\m},$$
+$$f=\frac{c}{\lambda}=\SI{4.777e8}{\Hz}.$$
+\item
+$$\omega=2\pi f=\SI{3e9}{\radian\per\s},$$
+$$\eta_0=\frac{\omega\mu}{k}=120\pi~\Omega,$$
+$$\mathbf{E}_i(x,z,t)=\text{Re}[\mathbf{E}_i(x,z)e^{j\omega t}]=\mathbf{a_y}10\cos(\num{3e9}t-6x-8z)~\si{\V\per\m}.$$
+$$\mathbf{a}_{n_i}=\mathbf{a}_x\cdot\frac{k_x}{k}+\mathbf{a}_z\cdot\frac{k_z}{k},$$
+$$\mathbf{H}_i(x,z)=\frac{1}{\eta_0}(\mathbf{a}_{n_i}\times E_i(x,z))=\left(\frac{\mathbf{a}_z}{20\pi}-\frac{\mathbf{a}_x}{15\pi}\right)e^{-j(6x+8z)},$$
+$$\mathbf{H}_i(x,z,t)=\text{Re}[\mathbf{H}_i(x,z)e^{j\omega t}]=\left(\frac{\mathbf{a}_z}{20\pi}-\frac{\mathbf{a}_x}{15\pi}\right)\cos(\num{3e9}t-6x-8z)~\si{\A\per\m}.$$
+\item
+$$\theta_i=\arccos(\mathbf{a}_n\cdot\mathbf{a}_z)=\arccos0.8\approx0.644~\si{\radian}.$$
+\item
+$$\mathbf{E}_r(x,z)=-\mathbf{E}_i(x,-z)=-\mathbf{a}_y10e^{-j(6x-8z)},$$
+$$\mathbf{a}_{n_r}=\mathbf{a}_x\cdot\frac{k_x}{k}-\mathbf{a}_z\cdot\frac{k_z}{k}$$
+$$\mathbf{H}_r(x,z)=\frac{1}{\eta_0}(\mathbf{a}_{n_r}\times E_r(x,z))=-\left(\frac{\mathbf{a}_z}{20\pi}+\frac{\mathbf{a}_x}{15\pi}\right)e^{-j(6x-8z)}.$$
+\item
+$$\mathbf{E}_1(x,z)=\mathbf{E}_i(x,z)+\mathbf{E}_r(x,z)=-\mathbf{a}_y20je^{-j6x}\sin8z~\si{V\per\m},$$
+$$\mathbf{H}_1(x,z)=\mathbf{H}_i(x,z)+\mathbf{H}_r(x,z)=-\frac{\mathbf{a}_z}{10\pi}j\sin8z-\frac{\mathbf{a_x}}{15\pi}2\cos8z.$$
+\end{enumerate}
+
+
+\end{document}
+
+
